@@ -9,8 +9,9 @@ export const cartData = (data = [], action) => {
             return [action.data,...data]
         case REMOVE_FROM_CART:
             console.warn('REMOVE_FROM_CART', action)
-            data.length = data.length? data.length-1 : 0
-            return [...data]
+            // data.length = data.length? data.length-1 : 0
+            const remainingItems = data.filter((item) => action.data !== item.id)
+            return [...remainingItems]
         case EMPTY_CART:
             console.warn('EMPTY_CART', action)
             data = []

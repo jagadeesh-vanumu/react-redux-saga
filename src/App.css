@@ -50,7 +50,13 @@
 
 .product-container img {
   width: 300px;
-  height: 300px;
+  height: 350px;
+}
+
+.logo {
+  float: left;
+  margin:0px;
+  padding: 20px;
 }
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
